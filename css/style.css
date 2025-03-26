@@ -1,87 +1,244 @@
-@charset "utf-8";
-
-body {
-    width: 100%;
+* {
     margin: 0;
     padding: 0;
-}
+    box-sizing: border-box;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
 
-header {
+  body {
+    font-family: Arial, sans-serif;
+    padding-top: 60px;
+  }
+  
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
-    margin: 0;
-    padding: 10px;
-}
-
-#menu {
+    background-color: rgba(14, 17, 223, 0.7);
+    color: rgb(255, 255, 255);
+    padding: 10px 0;
+    z-index: 10;
+  }
+  
+  nav ul {
     display: flex;
-    width: 100%;
-    justify-content: flex-end;
+    justify-content: center;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-
-#menu li {
-    margin: 10px 20px;
-    font-weight: bold;
-    font-family: sans-serif;
-    font-size: 14px;
-}
-
-#menu a{
-    color: black;
+  }
+  
+  nav ul li {
+    margin: 0 20px;
+  }
+  
+  nav ul li a {
+    color: white;
     text-decoration: none;
-}
-
-#menu a:hover {
-    color: green;
-}
-
-#top h1, #top h2, #top p {
-    text-align: center;
-    margin: 0;
-}
-
-main {
-    background-color: white;
-    width: 900px;
-    margin: 0 auto;
-    padding: 10px;
-}
-
-section {
-    margin-bottom: 20px;
-}
-
-section h1 {
     font-size: 18px;
-    border-left: 15px navy solid;
-    border-bottom: 1px navy solid;
-    padding-left: 10px;
-}
-
-section p {
-    margin-left: 20px;
-}
-
-.items ul {
-    list-style-type: none;
-}
-
-.items li {
-    display: inline-block;
-    border: 1px gray solid;
-    border-radius: 15px;
-    padding: 10px;
-    margin: 10px;
-    width: 200px;
+  }
+  
+  section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+  
+ 
+  #home {
+    position: relative;  
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  #home h1 {
+    font-size: 80px;
     font-weight: bold;
+  }
+  
+  .portfolio {
+    position: absolute;   
+    bottom: 280px;         
+    right: 60px;          
+    font-size: 36px;      
+    font-weight: normal;
+    color: gray;
+  }
+  #skills {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    justify-content: center;
+    height: 100vh;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content; 
+  }
+  .skills-title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center; 
+  }
+  .skills-list {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: left; 
+  }
+  
+  .skills-list li {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 10px;
+    width: 100%; 
+  }
+  
+  
+  section h1 {
+    font-size: 40px;
+    color: #333;
+  }
+  
+  section p {
+    font-size: 18px;
+    color: #555;
+  }
+  #profile {
+    text-align: left;
+    display: block;
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding-top: 80px;
+  }
+  .profile-img {
+    width: 150px; 
+    height: 150px;
+    border-radius: 50%; 
+    object-fit: cover;
+  }
+  #profile p {
+    word-break: break-word;
+    line-height: 1.8; 
+  }
+  #projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: flex-start; 
+    text-align: left; 
+    height: 100vh; 
+    padding: 40px;
+    max-width: 800px; 
+    margin: 0 auto; 
+  }
+  #projects h1 {
+    text-align: center; 
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  
+  #projects p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  #projects h3 {
+    margin-top: 20px;
+  }
+  
+  .github-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; 
+    font-size: 20px;
+    font-weight: bold;
+    color: #24292e; 
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    transition: background 0.3s ease, color 0.3s ease;
+  }
+
+  .github-link:hover {
+    background-color: #24292e;
+    color: white;
+  }
+
+  .github-link i {
+    font-size: 24px;
+  }
+  #contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    height: 100vh; 
     text-align: center;
+    padding: 40px;
+}
+#contact a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-footer {
-    width: 100%;
-    text-align: center;
-    font-style: italic;
- }
+#contact a:hover {
+  color: blue; 
+  transform: scale(1.1);
+}
+@media screen and (max-width: 768px) {
+  nav ul {
+      flex-direction: column; 
+      align-items: center;
+      padding: 10px 0;
+  }
+
+  nav ul li {
+      margin: 10px 0; 
+  }
+
+  #home h1 {
+      font-size: 40px; 
+  }
+
+  .profile-img {
+      width: 100px;
+      height: 100px;
+  }
+
+  #contact {
+      height: auto; 
+      padding: 60px 20px; 
+  }
+
+  #contact p {
+      font-size: 16px; 
+  }
+
+  #projects, #skills, #profile {
+      padding: 40px 20px; 
+      text-align: center; 
+  }
+
+  .skills-list {
+      text-align: center;
+  }
+
+  .portfolio {
+      bottom: 50px;
+      right: 10px;
+      font-size: 24px;
+  }
+}
  
